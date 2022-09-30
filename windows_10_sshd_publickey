@@ -14,3 +14,13 @@ sshd publickey on windows 10
 		*****************************
 
 8. after change options you should restart sshd service 
+
+
+#############next steps if u need connect from bitvise ssh client
+
+Host: [ENTER SERVER IP]		Username: [ENTER SSHD SERVER USERNAME]
+Port: [ENTER SERVER PORT]	Initial method: [publickey]
+
+9. Click [Client key manager]
+10. Import PRIVATE KEY. Change comment, if you need. Remember location id. For example, [Global 1]
+11. Go to main menu, choose Client key [Global 1].
