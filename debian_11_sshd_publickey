@@ -1,0 +1,13 @@
+1.      ssh-keygen -rsa on [CLIENT PC]
+2.      scp id_rsa.pub to [REMOTE SERVER]
+3.      cat id_rsa.pub >> ~/.ssh/authorized_keys
+4.      chmod 700 ~/.ssh
+        chmod 600 ~/.ssh/authorized_keys
+5.      disabling password authentication. find and modify the following lines in [/etc/ssh/sshd_config]:
+
+        ************************************
+        *PasswordAuthentication no         *
+        *ChallengeResponseAuthentication no*
+        *UsePAM no                         *
+        ************************************
+6.      systemctl restart sshd
