@@ -6,7 +6,7 @@ sshd publickey on windows 10
 4. goto windows client
 5. type wincli_rsa.pub >> adminitrators_authorized_keys
 6. icacls adminitrators_authorized_keys /inheritance: /grant "Administrator:F" /grant "SYSTEM:F"
-7. goto %programdata%/ssh and open in notepad.exe sshd_config. find, uncomment and change next options:
+7. goto %programdata%/ssh and open in notepad.exe (administrator mode) sshd_config. find, uncomment and change next options:
 
 		*****************************
 		* PasswordAuthentication no *
