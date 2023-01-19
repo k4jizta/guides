@@ -5,7 +5,7 @@ I use ESXi 6.7 like virtualization server (128 GB of RAM and 20 CPU cores) and d
 
 ## How to install:
 1. intall debian (or another linux distro) on VM or PC via ISO
-2. install ssh (for remote control) and setup [PubKeyAuthentication](../main/debian_11_sshd_publickey)
+2. install ssh (for remote control) and setup [PubKeyAuthentication](https://github.com/k4jizta/guides/blob/main/debian_11_sshd_publickey)
 3. `wget https://sd7.ascon.ru/Public/Utils/Sentinel%20HASP/Linux_driver/aksusbd-8.21.1.tar` *(check version)*
 4. `tar -tvf aksusbd-8.21.1 && cd aksusbd-8.21.1` better, when you `chmod +x` this folder, but not secure.
 5. `run ./dinst` 
