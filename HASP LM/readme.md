@@ -1,5 +1,5 @@
 # HASP
-##Important notice:
+## Important notice:
 
 I use ESXi 6.7 like virtualization server (128 GB of RAM and 20 CPU cores) and debian 11. For VM i use 1 GB of ram, 30 GB of SSD and 1 CPU core. My solution can be different with your **hardware** and **software** solutions. 
 
