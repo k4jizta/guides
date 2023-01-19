@@ -6,8 +6,7 @@ I use ESXi 6.7 like virtualization server (128 GB of RAM and 20 CPU cores) and d
 1. intall debian (or another linux distro) on VM or PC via ISO
 2. install ssh (for remote control) and setup pubkeyauthentication
 3. `wget https://sd7.ascon.ru/Public/Utils/Sentinel%20HASP/Linux_driver/aksusbd-8.21.1.tar` (check version number)
-4. `tar -tvf aksusbd-8.21.1 && cd aksusbd-8.21.1`
-  4.1. better, when you `chmod +x` this folder, but not secure.
+4. `tar -tvf aksusbd-8.21.1 && cd aksusbd-8.21.1` better, when you `chmod +x` this folder, but not secure.
 5. `run ./dinst` 
 6. check `systemctl status hasplmd` and `ss -tuan | greep 1947` if it running
 7. sym links created. service started. now we need open `localhost:1947`, but remotelyyou have 403 forbidden error page.
