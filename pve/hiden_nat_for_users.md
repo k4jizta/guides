@@ -30,3 +30,19 @@ iptables -t filter -A FORWARD -j DROP
 iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE 
 ```
 ### Setup basic isc-dhcp
+
+```apt install isc-dhcp-server```
+
+### Index of dhcpd.conf
+
+```
+...
+
+subnet 172.16.111.0 netmask 255.255.255.0 {
+  range 172.16.111.10 172.16.111.210;
+  option routers 172.16.111.1;
+  option domain-name-servers 10.0.5.1;
+}
+
+...
+```
