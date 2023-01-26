@@ -2,7 +2,7 @@ if you want to use nat, but your users need change network interface, you can se
 
 create .sh file for iptables rules
 
-*** Index of ipt.sh
+###Index of ipt.sh
 
 ```
 ## delete older iptables rules
@@ -29,5 +29,4 @@ iptables -t filter -A FORWARD -j DROP
 #masquerading vm connection
 iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE 
 ```
-
-*** set up basic isc-dhcp
+###set up basic isc-dhcp
