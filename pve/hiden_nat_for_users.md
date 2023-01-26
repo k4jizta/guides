@@ -29,6 +29,9 @@ iptables -t filter -A FORWARD -j DROP
 #masquerading vm connection
 iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE 
 ```
+then, install iptables-persistent for save your iptables rules
+``` apt install iptables-persistent ```
+
 ### Setup basic isc-dhcp
 
 ```apt install isc-dhcp-server```
