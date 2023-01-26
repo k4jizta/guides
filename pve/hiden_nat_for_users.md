@@ -1,4 +1,4 @@
-if you want to use nat, but your users need change network interface, you can setup iptables into debian (proxmox ve installing on debian-based distro)
+if you want to use nat, but your users need change network interface, you can setup iptables into debian (proxmox ve installing on debian-based distro). warn notice: i'm not sure, that will stable works, do it on your fear and risk.
 
 create .sh file for iptables rules
 
@@ -58,4 +58,14 @@ subnet 172.16.111.0 netmask 255.255.255.0 {
 INTERFACESv4="vmbr0"
 
 ...
+```
+now, check ```ps -aux | grep dhcp```. proxmox ve may be spawn own dhcp server (i don't sure)
+if you have pre-started dhcp serve, you can't start custom isc-dhcp-server.service. well, i don't know either best idea then stop this service and delete dhcp.pid file.
+
+```
+ps -aux | grep dhcp
+pkill -9 dhcpd
+ps -aux | grep dhcp
+rm /var/run/dhcpd.pid
+systemctl start isc-dhcp-server
 ```
