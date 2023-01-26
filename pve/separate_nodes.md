@@ -4,13 +4,18 @@ stop pve services:
 
 * systemctl stop pve-cluster
 * systemctl stop corosync
+
 switch proxmox file system to local mode:
+
 * pmxcfs -l
 delete info about another host:
+
 * rm /etc/pve/nodes/{node_name}
 * rm /etc/pve/corosync.conf
 * rm -r /etc/corosync/
-start service in normal mode;
+
+start service in normal mode:
+
 * killall pmxcfs
 * systemctl start pve-cluster
 
