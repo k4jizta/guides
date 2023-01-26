@@ -1,11 +1,12 @@
 if you want to use nat, but your users need change network interface, you can setup iptables into debian (proxmox ve installing on debian-based distro)
 
-nano ipt.sh
+create .sh file for iptables rules
 
-*** start of ipt.sh
+*** Index of ipt.sh
 
+```
 ## delete older iptables rules
-``` iptables -t filter -F
+iptables -t filter -F
 iptables -t nat -F
 
 iptables -t filter -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
@@ -29,4 +30,4 @@ iptables -t filter -A FORWARD -j DROP
 iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE 
 ```
 
-set up basic isc-dhcp
+*** set up basic isc-dhcp
