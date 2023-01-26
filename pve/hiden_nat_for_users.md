@@ -5,7 +5,7 @@ nano ipt.sh
 *** start of ipt.sh
 
 ## delete older iptables rules
-iptables -t filter -F
+``` iptables -t filter -F
 iptables -t nat -F
 
 iptables -t filter -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
@@ -26,8 +26,7 @@ iptables -t filter -A FORWARD -m conntrack --ctstate NEW -i vmbr0 -o enp0s31f6 -
 iptables -t filter -A FORWARD -j DROP
 
 #masquerading vm connection
-iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE
-
-*** end of ipt.sh
+iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE 
+```
 
 set up basic isc-dhcp
