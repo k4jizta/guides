@@ -59,7 +59,7 @@ INTERFACESv4="vmbr0"
 
 ...
 ```
-now, check ```ps -aux | grep dhcp```. proxmox ve may be spawn own dhcp server (i don't sure)
+now, check ```ps -aux | grep dhcp```. proxmox ve may be spawn own dhcp server (i'm not sure)
 if you have pre-started dhcp serve, you can't start custom isc-dhcp-server.service. well, i don't know either best idea then stop this service and delete dhcp.pid file.
 
 ```
