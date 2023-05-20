@@ -2,7 +2,7 @@ create pool by shell command
 `pvesh create /pools --poolid [poolid] --comment mycomment`
 
 create more then 1 poll by script 
-```
+```bash
 #!/bin/bash
 # Basic while loop
 counter=1
