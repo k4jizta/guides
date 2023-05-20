@@ -13,3 +13,13 @@ echo $counter
 ((counter++))
 done
 ```
+if u wanna to create empty OVS bridge interface in PVE, just copy to `/etc/network/interfaces`
+
+```bash
+...
+auto vmbrXX
+iface vmbrXX inet manual
+        ovs_type OVSBridge
+#COMMENT SECTION
+...
+```
