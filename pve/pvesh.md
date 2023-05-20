@@ -23,3 +23,4 @@ iface vmbrXX inet manual
 #COMMENT SECTION
 ...
 ```
+after that, you need restart network settings by `systemctl restart networking`
